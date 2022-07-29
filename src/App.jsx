@@ -80,6 +80,12 @@ function App() {
       <main>
         <SearchList filteredPost={postData} />
       </main>
+      <footer className="text-center py-10 space-y-2">
+        <p className="text-sm text-zinc-500">
+          Codelândia Desafio 1 - Design by IURI CODE
+        </p>
+        <p className="text-sm text-zinc-500">Developer - Lucas Samuel</p>
+      </footer>
     </>
   );
 }
