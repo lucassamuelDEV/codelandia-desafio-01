@@ -1,25 +1,35 @@
-import { useEffect, useState } from 'react'
-import SearchList from './components/SearchList'
-import blogData from './data/blogData'
+import { useEffect, useState } from 'react';
+import SearchList from './components/SearchList';
+import blogData from './data/blogData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  offset: 100,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 50,
+});
+AOS.refresh();
 
 function App() {
-  const [postData, setPostData] = useState([])
+  const [postData, setPostData] = useState([]);
 
-  const handleChange = e => {
-    const filteredPost = postData.filter(post => {
-      return post.title.toLowerCase().includes(e.target.value.toLowerCase())
-    })
+  const handleChange = (e) => {
+    const filteredPost = postData.filter((post) => {
+      return post.title.toLowerCase().includes(e.target.value.toLowerCase());
+    });
 
     if (e.target.value === '') {
-      return setPostData(blogData)
+      return setPostData(blogData);
     } else {
-      return setPostData(filteredPost)
+      return setPostData(filteredPost);
     }
-  }
+  };
 
   useEffect(() => {
-    setPostData(() => blogData)
-  }, [])
+    setPostData(() => blogData);
+  }, []);
 
   return (
     <>
@@ -71,7 +81,7 @@ function App() {
         <SearchList filteredPost={postData} />
       </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
