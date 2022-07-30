@@ -2,7 +2,7 @@
 
 Esta é a minha solução para a Codelândia - Iuri Silva . O desafio consiste em construir uma página de blog simples e responsiva com barra de busca, aplicar uma animação no layout e algumas customizações na barra de busca.
 
-💻 [Clique aqui e veja a DEMO](https://ragazziana.github.io/codelandia-challenge-01/)
+💻 [Clique aqui e veja a DEMO](https://codelandia-desafio-01-ten.vercel.app/)
 
 ## Screenshots
 
